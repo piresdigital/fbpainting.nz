@@ -1,13 +1,29 @@
 {
-  "private": true,
   "name": "fbpainting.nz",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "FB Painting Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "next": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve": "npm run build && firebase emulators:start --only functions,hosting",
+    "shell": "npm run build && firebase functions:shell",
+    "deploy": "firebase deploy --only functions,hosting",
+    "logs": "firebase functions:log"
   },
-  "keywords": [],
   "author": "Pires Digital Ltd",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.9.4",
+    "firebase-admin": "^11.0.1",
+    "firebase-functions": "^3.23.0",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^2.3.0",
+    "firebase-tools": "^11.8.0"
+  }
 }
