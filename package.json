@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "fbpainting.nz",
+  "version": "0.1.0",
+  "description": "FB Painting Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pires Digital Ltd",
+  "license": "ISC"
+}
