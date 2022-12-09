@@ -1,0 +1,14 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="1920px" height="33px">
+<rect  x="0" y="917" width="1920" height="33" fill="white" />
+<path fill-rule="evenodd"  fill="rgb(0, 108, 64)"
+ d="M-0.000,0.000 L1919.1000,0.000 L1919.1000,32.1000 L-0.000,32.1000 "/>
+<path fill-rule="evenodd"  fill="rgb(0, 110, 177)"
+ d="M-0.000,0.000 L1464.999,0.000 L1692.1000,32.1000 L-0.000,32.1000 "/>
+<path fill-rule="evenodd"  fill="rgb(232, 194, 4)"
+ d="M-0.000,0.000 L1330.1000,0.000 L1558.1000,32.1000 L-0.000,32.1000 "/>
+<path fill-rule="evenodd"  fill="rgb(215, 25, 33)"
+ d="M-0.000,0.000 L1130.1000,0.000 L1358.1000,32.1000 L-0.000,32.1000 L-0.000,0.000 Z"/>
+</svg>
