@@ -13,9 +13,9 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className='w-full h-[28px] bg-stripe-pattern bg-no-repeat bg-right bg-cover'></div>
-        <div className='flex flex-col items-center bg-gradient-to-t from-slate-200 to-white bg-[length:100%_280px] bg-repeat-x'>
-          <div className='text-center pt-14 pb-4'>
+        <div className='w-full h-[20px] bg-stripe-pattern bg-no-repeat bg-cover bg-[center_right_-15rem] md:bg-center'></div>
+        <div className='flex flex-col md:flex-row items-center bg-gradient-to-t from-slate-200 to-white bg-[length:100%_280px] bg-repeat-x'>
+          <div className='text-center pt-14 px-4 md:pt-11 md:pb-11'>
             <img
               className='inline-block w-[100px]'
               src='/images/fb-logo.png'
@@ -23,7 +23,7 @@ export default function Header() {
             />
           </div>
           <div className='flex items-center flex-col-reverse w-full'>
-            <div className='flex flex-col items-center w-full -translate-y-1'>
+            <div className='flex flex-col items-center w-full -translate-y-[0]'>
               <nav
                 className='
                 bg-brand-blue 
