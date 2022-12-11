@@ -1,56 +1,71 @@
 import { useState } from 'react';
+import Link from 'next/link';
+import { useSpring, animated } from 'react-spring';
 import { BsWhatsapp, BsArrowDownShort } from 'react-icons/bs';
 
 export default function Header() {
   const [showNav, setShowNav] = useState(false);
 
+  const showNavAnimation = useSpring({
+    to: { opacity: 1, height: '350px', padding: '4rem 0 2.5rem' }
+  });
+
   return (
     <>
       <header>
-        <div className='w-full h-[28px] bg-stripe-pattern bg-no-repeat bg-fit bg-right sm:bg-cover'></div>
-        <div className='flex flex-col items-center gap-x-14 h-[280px] bg-gradient-to-t from-slate-200 to-white bg-[length:100%_280px] bg-repeat-x md:flex-row md:gap-x-0 md:gap-y-14'>
-          <div className='w-[120px] mt-20 mb-6'>
-            <img src='/images/fb-logo.png' alt='FB Painting' />
+        <div className='w-full h-[28px] bg-stripe-pattern bg-no-repeat bg-right bg-cover'></div>
+        <div className='flex flex-col items-center bg-gradient-to-t from-slate-200 to-white bg-[length:100%_280px] bg-repeat-x'>
+          <div className='text-center pt-14 pb-4'>
+            <img
+              className='inline-block w-[100px]'
+              src='/images/fb-logo.png'
+              alt='FB Painting'
+            />
           </div>
           <div className='flex items-center flex-col-reverse w-full'>
-            <div
-              className={`flex flex-col items-center w-full -translate-y-1 group ${
-                showNav ? 'open' : 'close'
-              }`}>
-              <nav className='bg-brand-blue w-full h-auto group-[.close]:h-3'>
-                <ul className='flex flex-col gap-[3em] items-center justify-between pt-[6em] pb-16 text-white '>
+            <div className='flex flex-col items-center w-full -translate-y-1'>
+              <nav
+                className='
+                bg-brand-blue 
+                w-full 
+                h-auto
+                transition-all ease-out
+              '>
+                <animated.ul
+                  className='flex flex-col gap-[1.5em] items-center justify-between h-12 opacity-0 text-white transition-all ease-out'
+                  style={showNav ? showNavAnimation : {}}>
                   <li>
-                    <a className='text-2xl hover:opacity-80' href='#'>
+                    <Link className='text-xl hover:opacity-80' href='/'>
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className='text-2xl hover:opacity-80' href='#'>
+                    <Link className='text-xl hover:opacity-80' href='/about'>
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className='text-2xl hover:opacity-80' href='#'>
+                    <Link className='text-xl hover:opacity-80' href='/services'>
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className='text-2xl hover:opacity-80' href='#'>
+                    <Link className='text-xl hover:opacity-80' href='/projects'>
                       Projects
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className='text-2xl hover:opacity-80' href='#'>
+                    <Link className='text-xl hover:opacity-80' href='/contact'>
                       Contact
-                    </a>
+                    </Link>
                   </li>
-                </ul>
-                <div className='absolute -bottom-14 left-1/2 -translate-x-1/2 bg-brand-blue mx-auto pt-5 group-[.close]:pt-8 group-[.close]:-bottom-[6em] pb-5 px-4 rounded-b-full text-white text-center'>
+                </animated.ul>
+                <div className='absolute -bottom-11 left-1/2 -translate-x-1/2 bg-brand-blue rounded-b-full px-3 py-2 text-white text-center'>
                   <a
                     id='toggleMenu'
                     className='flex flex-col gap-y-2 items-center cursor-pointer'
                     onClick={() => setShowNav(!showNav)}>
-                    <span className='text-xs'>MENU</span>
+                    <span className='text-xs'>Menu</span>
                     <span>
                       <BsArrowDownShort />
                     </span>
@@ -60,12 +75,12 @@ export default function Header() {
             </div>
 
             <div className='flex flex-row shadow-xl translate-y-7 w-[90%]'>
-              <div className='flex-1 bg-slate-100 py-4 text-center'>
+              <div className='flex-1 bg-slate-100 py-5 text-sm text-center'>
                 Request A Free Quote
               </div>
               <a
                 href='tel:0211234567'
-                className='flex-1 text-center text-xl bg-brand-red-500 text-white py-4 hover:bg-brand-red-600 transition-all'>
+                className='flex-1 text-center text-lg bg-brand-red-500 text-white py-4 transition-all hover:bg-brand-red-600'>
                 021 123 4567{' '}
                 <BsWhatsapp className='inline-block -translate-y-[3px] ml-1' />
               </a>
