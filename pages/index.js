@@ -3,6 +3,7 @@ import Header from '../components/header';
 import Hero from '../components/hero';
 import Testimonial from '../components/testimonial';
 import SectionTitle from '../components/typography/section-title';
+import Partners from '../components/partners';
 
 import {
   BsPinMapFill,
@@ -21,7 +22,7 @@ const handleForm = (e) => {
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header variant />
       <Hero background='/images/slider/image-1.jpg' />
       <Testimonial
         name='Dhavidy Pires'
@@ -129,26 +130,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='container mx-auto mb-44'>
-        <SectionTitle title='' subtitle='Our Partners' />
-        <div className='flex flex-col md:flex-row items-center justify-center gap-8'>
-          <img
-            className='w-[200px] opacity-60 transition-all hover:opacity-100'
-            src='/images/partners/bcito-logo.jpg'
-            alt='BCITO'
-          />
-          <img
-            className='w-[200px] opacity-60 transition-all hover:opacity-100'
-            src='/images/partners/gj-logo.jpg'
-            alt='GJ Gardner Homes'
-          />
-          <img
-            className='w-[200px] opacity-60 transition-all hover:opacity-100'
-            src='/images/partners/dulux-logo.jpg'
-            alt='Dulux'
-          />
-        </div>
-      </div>
+      <Partners />
 
       <div className='container mx-auto mb-44'>
         <SectionTitle title='Contact Us' subtitle='Get In Touch' />
@@ -180,7 +162,7 @@ export default function Home() {
               <span className='block text-2xl'>Social</span>
               <span className='block text-lg'>
                 <ul className='flex flex-row gap-12 justify-center mt-6'>
-                  <li>
+                  <li className='flex-1'>
                     <a
                       href=''
                       target='_blank'
@@ -188,7 +170,7 @@ export default function Home() {
                       <BsFacebook className='text-brand-blue' />
                     </a>
                   </li>
-                  <li>
+                  <li className='flex-1'>
                     <a
                       href=''
                       target='_blank'
@@ -196,7 +178,7 @@ export default function Home() {
                       <BsInstagram className='text-brand-red-600' />
                     </a>
                   </li>
-                  <li>
+                  <li className='flex-1'>
                     <a
                       href=''
                       target='_blank'
@@ -215,7 +197,7 @@ export default function Home() {
             </h4>
             <div className='w-[80%] max-w-4xl mx-auto flex flex-col gap-4 mb-4'>
               <input
-                className='border-2 rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
+                className='border rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
                 type='text'
                 name='name'
                 maxLength='30'
@@ -224,7 +206,7 @@ export default function Home() {
                 placeholder='Your Name*'
               />
               <input
-                className='border-2 rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
+                className='border rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
                 type='text'
                 name='phone'
                 maxLength='20'
@@ -234,17 +216,17 @@ export default function Home() {
             </div>
             <div className='w-[80%] max-w-4xl mx-auto flex flex-col gap-4 mb-4'>
               <input
-                className='border-2 rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
+                className='border rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
                 type='email'
                 name='email'
-                max-maxLength='50'
+                maxLength='50'
                 placeholder='Your Email Address*'
                 required
               />
             </div>
             <div className='w-[80%] max-w-4xl mx-auto flex flex-col gap-4 mb-4'>
               <textarea
-                className='border-2 rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
+                className='border rounded-lg border-gray-400 p-2 focus:outline-none focus:border-brand-blue '
                 placeholder='Type Your Message Here*'
                 maxLength='240'
                 required

@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 // icons
 import { BsWhatsapp, BsArrowDownShort } from 'react-icons/bs';
 
-export default function Header() {
+export default function Header({ variant }) {
   const [showNav, setShowNav] = useState(false);
 
   const showNavAnimation = useSpring({
@@ -273,9 +273,10 @@ export default function Header() {
                       text-center'>
                     Request A Free Quote
                   </div>
-                  <a
-                    href='tel:0211234567'
-                    className='
+                  {variant ? (
+                    <a
+                      href='tel:0211234567'
+                      className='
                         flex-1
                         text-center
                         text-lg
@@ -285,14 +286,35 @@ export default function Header() {
                         transition-all
                         hover:bg-brand-red-600
                         md:hover:scale-105'>
-                    021 123 4567
-                    <BsWhatsapp
-                      className='
+                      021 123 4567
+                      <BsWhatsapp
+                        className='
                         inline-block
                         -translate-y-[3px]
                         ml-1'
-                    />
-                  </a>
+                      />
+                    </a>
+                  ) : (
+                    <a
+                      href='tel:0211234567'
+                      className='
+                        flex-1
+                        text-center
+                        text-lg
+                        bg-brand-blue
+                        text-white
+                        py-4
+                        transition-transform
+                        md:hover:scale-105'>
+                      021 123 4567
+                      <BsWhatsapp
+                        className='
+                        inline-block
+                        -translate-y-[3px]
+                        ml-1'
+                      />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
