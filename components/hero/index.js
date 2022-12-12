@@ -1,13 +1,9 @@
-import { useSpring, animated } from 'react-spring';
-
-// import images
-
-export default function Hero() {
-  const slideImages = [];
-
+export default function Hero({ background }) {
   return (
     <>
-      <div className='h-[370px] bg-[url(/images/slider/image-1.jpg)] bg-cover bg-center bg-red-400'></div>
+      <div
+        className='-z-10 h-[370px] md:h-[60vh] relative bg-fixed bg-cover'
+        style={{ backgroundImage: `url(${background})` }}></div>
     </>
   );
 }
