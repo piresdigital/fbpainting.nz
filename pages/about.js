@@ -13,7 +13,7 @@ export default function AboutUs() {
         <img
           className='block w-[1000px] translate-x-24 md:translate-x-48'
           src='/images/yellow-brush-logo.gif'
-          alt='Yellow brush'
+          alt='yellow brush logo'
         />
       </div>
       <div className='flex flex-col lg:flex-row gap-24 w-[80%] max-w-6xl mx-auto justify-between items-center mb-32'>

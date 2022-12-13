@@ -53,13 +53,15 @@ export default function Header({ variant }) {
               md:pt-11
               md:pb-11
               '>
-              <img
-                className='
+              <Link href='/'>
+                <img
+                  className='
                 inline-block
                 w-[100px]'
-                src='/images/fb-logo.png'
-                alt='FB Painting'
-              />
+                  src='/images/fb-logo.png'
+                  alt='FB Painting'
+                />
+              </Link>
             </div>
 
             <div
@@ -114,7 +116,7 @@ export default function Header({ variant }) {
                         className='
                         text-xl
                         hover:opacity-80'
-                        href='/'>
+                        href='/about'>
                         About
                       </Link>
                     </li>
@@ -123,7 +125,7 @@ export default function Header({ variant }) {
                         className='
                         text-xl
                         hover:opacity-80'
-                        href='/'>
+                        href='/services'>
                         Services
                       </Link>
                     </li>
@@ -132,7 +134,7 @@ export default function Header({ variant }) {
                         className='
                         text-xl
                         hover:opacity-80'
-                        href='/'>
+                        href='/projects'>
                         Projects
                       </Link>
                     </li>
@@ -141,7 +143,7 @@ export default function Header({ variant }) {
                         className='
                         text-xl
                         hover:opacity-80'
-                        href='/'>
+                        href='/contact'>
                         Contact
                       </Link>
                     </li>

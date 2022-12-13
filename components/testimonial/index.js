@@ -1,9 +1,11 @@
-export default function Testimonial({ children, name, profile, pic }) {
+export default function Testimonial({ children, name, profile, pic, variant }) {
   return (
     <>
       <div
-        className='flex flex-col w-[85%] mx-auto rounded-lg overflow-hidden -translate-y-[6rem] border-[6px] border-white shadow-2xl bg-gray-50
-        md:transition-transform md:flex-row md:max-w-[800px] md:hover:scale-105'>
+        className={`flex flex-col w-[85%] mx-auto rounded-lg overflow-hidden ${
+          variant ? '-translate-y-[6rem]' : ''
+        } border-[6px] border-white shadow-2xl bg-gray-50
+        md:transition-transform md:flex-row md:max-w-[800px] md:hover:scale-105`}>
         <div
           className={
             'w-full h-[200px] overflow-hidden relative z-20 md:flex-1 md:h-[290px]'
