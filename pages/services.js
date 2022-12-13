@@ -6,10 +6,12 @@ import Testimonial from '../components/testimonial';
 import Partners from '../components/partners';
 import ContactForm from '../components/contactform';
 import Footer from '../components/footer';
+import ToTop from '../components/toTop';
 
 export default function Services() {
   return (
     <>
+      <ToTop />
       <Header />
       <Breadcrumb title='Services' />
       <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>

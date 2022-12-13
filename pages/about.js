@@ -3,10 +3,12 @@ import Breadcrumb from '../components/breadcrumb';
 import SectionTitle from '../components/typography/section-title';
 import Partners from '../components/partners';
 import Footer from '../components/footer';
+import ToTop from '../components/toTop';
 
 export default function AboutUs() {
   return (
     <>
+      <ToTop />
       <Header />
       <Breadcrumb title='About Us' />
       <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>

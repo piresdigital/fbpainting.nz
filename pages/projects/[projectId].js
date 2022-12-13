@@ -6,6 +6,7 @@ import Breadcrumb from '../../components/breadcrumb';
 import SectionTitle from '../../components/typography/section-title';
 import Partners from '../../components/partners';
 import Footer from '../../components/footer';
+import ToTop from '../../components/toTop';
 
 export default function ProjectPage() {
   const router = useRouter();
@@ -23,6 +24,7 @@ export default function ProjectPage() {
 
   return (
     <>
+      <ToTop />
       <Header />
       <Breadcrumb title='Projects' path={projectId} />
       <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>

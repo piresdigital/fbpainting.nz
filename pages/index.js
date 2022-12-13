@@ -6,10 +6,12 @@ import SectionTitle from '../components/typography/section-title';
 import Partners from '../components/partners';
 import Services from '../components/services';
 import ContactForm from '../components/contactform';
+import ToTop from '../components/toTop';
 
 export default function Home() {
   return (
     <>
+      <ToTop />
       <Header variant />
       <Hero background='/images/slider/image-1.jpg' />
       <Testimonial
