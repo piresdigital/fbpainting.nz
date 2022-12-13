@@ -1,3 +1,26 @@
+export const navigationItems = [
+  {
+    name: 'Home',
+    slug: '/'
+  },
+  {
+    name: 'About',
+    slug: '/about'
+  },
+  {
+    name: 'Services',
+    slug: '/services'
+  },
+  {
+    name: 'Projects',
+    slug: '/projects/'
+  },
+  {
+    name: 'Contact',
+    slug: '/contact'
+  }
+];
+
 export const projects = [
   {
     category: 'interior',
