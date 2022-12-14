@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // data
@@ -9,14 +9,20 @@ import { BsWhatsapp, BsArrowDownShort } from 'react-icons/bs';
 
 export default function Header({ variant }) {
   const [showNav, setShowNav] = useState(false);
+  const [stickyHeader, setStickyHeader] = useState(false);
 
-  // const showNavAnimation = useSpring({
-  //   to: { opacity: 1, height: '350px', padding: '4rem 0 2.5rem' }
-  // });
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY >= 320 ? setStickyHeader(true) : setStickyHeader(false);
+    });
+  });
 
   return (
     <>
-      <header>
+      <header
+        className={`${
+          stickyHeader ? 'relative md:fixed md:top-0 md:left-0 md:shadow-xl' : 'relative'
+        } w-full z-30 transition-all`}>
         <div className='w-full h-[18px] bg-stripe-pattern bg-no-repeat bg-cover bg-[center_right_-15rem] md:bg-center'></div>
 
         <div className='bg-gradient-to-t from-slate-200 to-white bg-[length:100%_280px] bg-repeat-x'>
