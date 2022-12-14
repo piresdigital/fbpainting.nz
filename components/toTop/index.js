@@ -19,7 +19,7 @@ export default function ToTop() {
       }}
       className='fixed bottom-10 md:bottom-8 right-4 md:right-8 z-30 p-1 bg-white rounded-full transition-all opacity-0 translate-y-8 cursor-pointer'
       style={active ? { opacity: 1, transform: 'translateY(0)' } : {}}>
-      <BsFillArrowUpCircleFill className='text-5xl text-brand-red-500' />
+      <BsFillArrowUpCircleFill className='text-5xl text-brand-red-500 hover:text-brand-blue' />
     </a>
   );
 }

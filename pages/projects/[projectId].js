@@ -1,6 +1,4 @@
 import { useRouter } from 'next/router';
-
-import { projectsList } from '../../data/data';
 import Header from '../../components/header';
 import Breadcrumb from '../../components/breadcrumb';
 import SectionTitle from '../../components/typography/section-title';
@@ -8,15 +6,16 @@ import Partners from '../../components/partners';
 import Footer from '../../components/footer';
 import ToTop from '../../components/toTop';
 
+import { projects } from '../../data/data';
+import Watermark from '../../components/watermark';
+
 export default function ProjectPage() {
   const router = useRouter();
   const { projectId } = router.query;
 
-  const projectContent = projectsList.map((item) => {
-    if (item.businessName === projectId) {
-      return {
-        ...item
-      };
+  const projectContent = projects.map((item, index) => {
+    if (item.slug === projectId) {
+      return item;
     }
   });
 
@@ -27,32 +26,21 @@ export default function ProjectPage() {
       <ToTop />
       <Header />
       <Breadcrumb title='Projects' path={projectId} />
-      <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>
-        <img
-          className='block w-[1000px] translate-x-24 md:translate-x-48'
-          src='/images/red-brush-logo.gif'
-          alt='red brush logo'
-        />
-      </div>
+      <Watermark color='red' />
 
       <section className='mb-32'>
         <SectionTitle title={projectId} subtitle='Our Client' />
         <div className='flex flex-col md:flex-row w-10/12 max-w-5xl mx-auto gap-10 mb-16'>
-          <img
-            className='flex-1 w-full'
-            src={projectContent[0].pictures[0]}
-            alt={projectId[0].businessName}
-          />
-          <img
-            className='flex-1 w-full'
-            src={projectContent[0].pictures[1]}
-            alt={projectId[0].businessName}
-          />
-          <img
-            className='flex-1 w-full'
-            src={projectContent[0].pictures[2]}
-            alt={projectId[0].businessName}
-          />
+          {projectContent[0].pictures.map((item, index) => {
+            return (
+              <img
+                key={'projectPic_' + index}
+                className='flex-1 w-full transition-all hover:z-20 hover:scale-150'
+                src={projectContent[0].pictures[index]}
+                alt={projectContent[0].businessName}
+              />
+            );
+          })}
         </div>
         <div className='w-10/12 max-w-5xl mx-auto flex flex-col md:flex-row gap-8'>
           <div className='flex-1'>

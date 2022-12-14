@@ -4,6 +4,7 @@ import SectionTitle from '../components/typography/section-title';
 import Partners from '../components/partners';
 import Footer from '../components/footer';
 import ToTop from '../components/toTop';
+import Watermark from '../components/watermark';
 
 export default function AboutUs() {
   return (
@@ -11,13 +12,7 @@ export default function AboutUs() {
       <ToTop />
       <Header />
       <Breadcrumb title='About Us' />
-      <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>
-        <img
-          className='block w-[1000px] translate-x-24 md:translate-x-48'
-          src='/images/yellow-brush-logo.gif'
-          alt='yellow brush logo'
-        />
-      </div>
+      <Watermark color='yellow' />
       <div className='flex flex-col lg:flex-row gap-24 w-[80%] max-w-6xl mx-auto justify-between items-center mb-32'>
         <div className='lg:w-5/12'>
           <img
@@ -27,8 +22,8 @@ export default function AboutUs() {
           />
         </div>
         <div className='lg:w-7/12'>
-          <h2 className='text-3xl mb-10'>Personal Statement</h2>
-          <div>
+          <h2 className='text-4xl mb-10'>Personal Statement</h2>
+          <div className='text-lg'>
             <p className='mb-6'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse

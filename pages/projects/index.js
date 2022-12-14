@@ -7,6 +7,7 @@ import SectionTitle from '../../components/typography/section-title';
 import ContactForm from '../../components/contactform';
 import Footer from '../../components/footer';
 import ToTop from '../../components/toTop';
+import Watermark from '../../components/watermark';
 
 import { projects } from '../../data/data';
 
@@ -22,13 +23,7 @@ export default function Projects() {
       <ToTop />
       <Header />
       <Breadcrumb title='Projects' />
-      <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>
-        <img
-          className='block w-[1000px] translate-x-24 md:translate-x-48'
-          src='/images/red-brush-logo.gif'
-          alt='red brush logo'
-        />
-      </div>
+      <Watermark color='red' />
 
       <SectionTitle title='Projects' subtitle='Our Work' />
 
@@ -54,7 +49,7 @@ export default function Projects() {
               return (
                 <div key={i} className='w-[70%] max-w-[200px] transition-all'>
                   <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
-                    <Link href={`/projects/${item.businessName}`}>
+                    <Link href={`/projects/${item.slug}`}>
                       <img
                         className='rounded-lg hover:opacity-90'
                         src={item.thumbnail}

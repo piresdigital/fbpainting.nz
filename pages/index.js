@@ -7,6 +7,7 @@ import Partners from '../components/partners';
 import Services from '../components/services';
 import ContactForm from '../components/contactform';
 import ToTop from '../components/toTop';
+import Watermark from '../components/watermark';
 
 import { projects } from '../data/data';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <ToTop />
       <Header variant />
       <Hero background='/images/slider/image-1.jpg' />
+      <Watermark color='red' />
       <Testimonial variant />
 
       <Services />

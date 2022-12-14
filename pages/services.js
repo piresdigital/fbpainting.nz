@@ -7,6 +7,7 @@ import Partners from '../components/partners';
 import ContactForm from '../components/contactform';
 import Footer from '../components/footer';
 import ToTop from '../components/toTop';
+import Watermark from '../components/watermark';
 
 export default function Services() {
   return (
@@ -14,13 +15,7 @@ export default function Services() {
       <ToTop />
       <Header />
       <Breadcrumb title='Services' />
-      <div className='absolute top-[500px] md:top-[300px] right-0 -z-50 opacity-10 overflow-hidden'>
-        <img
-          className='block w-[1000px] translate-x-24 md:translate-x-48'
-          src='/images/green-brush-logo.gif'
-          alt='green brush logo'
-        />
-      </div>
+      <Watermark color='green' />
 
       <ServicesBanner />
 

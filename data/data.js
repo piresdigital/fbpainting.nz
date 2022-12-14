@@ -23,6 +23,7 @@ export const navigationItems = [
 
 export const projects = [
   {
+    slug: 'business-name',
     category: 'interior',
     thumbnail: 'https://via.placeholder.com/500',
     businessName: 'Business Name One',
