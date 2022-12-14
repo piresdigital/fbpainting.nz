@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { projectsList } from '../../projects';
+import { projectsList } from '../../data/data';
 import Header from '../../components/header';
 import Breadcrumb from '../../components/breadcrumb';
 import SectionTitle from '../../components/typography/section-title';

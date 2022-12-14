@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-import { projectsList } from '../../projects';
 import Header from '../../components/header';
 import Breadcrumb from '../../components/breadcrumb';
 import SectionTitle from '../../components/typography/section-title';
@@ -9,10 +8,12 @@ import ContactForm from '../../components/contactform';
 import Footer from '../../components/footer';
 import ToTop from '../../components/toTop';
 
+import { projects } from '../../data/data';
+
 export default function Projects() {
   const categories = ['all', 'interior', 'exterior', 'commercial'];
 
-  const [list, setList] = useState(projectsList);
+  const [list, setList] = useState(projects);
   const [category, setCategories] = useState(categories);
   const [activeCategory, setActiveCategory] = useState('all');
 

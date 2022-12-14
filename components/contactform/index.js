@@ -46,7 +46,7 @@ export default function ContactForm() {
             <div className='flex-1 bg-gray-100 px-6 py-10 text-center rounded-2xl border-b-8 border-brand-green'>
               <BsFillChatDotsFill className='inline-block text-3xl text-brand-red-500 mb-6' />
               <span className='block text-2xl'>Social</span>
-              <span className='block text-lg'>
+              <span className='block text-lg w-8/12 mx-auto'>
                 <ul className='flex flex-row gap-12 justify-center mt-6'>
                   <li className='flex-1'>
                     <a

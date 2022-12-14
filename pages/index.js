@@ -8,74 +8,38 @@ import Services from '../components/services';
 import ContactForm from '../components/contactform';
 import ToTop from '../components/toTop';
 
+import { projects } from '../data/data';
+
 export default function Home() {
+  const featuredProjects = projects.slice(0, 4);
+
   return (
     <>
       <ToTop />
       <Header variant />
       <Hero background='/images/slider/image-1.jpg' />
-      <Testimonial
-        variant
-        name='Dhavidy Pires'
-        profile='/images/profile-pic.jpg'
-        pic='/images/testimonial/testimonial-1.jpg'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor
-        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisseultrices
-        gravida.
-      </Testimonial>
+      <Testimonial variant />
 
       <Services />
 
       <div className='container mx-auto mb-44'>
         <SectionTitle title='Projects' subtitle='our work' />
         <div className='flex flex-col md:flex-wrap gap-12 items-center mb-20 md:justify-center md:flex-row'>
-          <div className='w-[70%] max-w-[260px]'>
-            <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
-              <Link href='/projects/873687236'>
-                <img
-                  className='rounded-lg hover:opacity-90'
-                  src='/images/service-example.jpg'
-                  alt='Service Example'
-                />
-              </Link>
-            </div>
-          </div>
-
-          <div className='w-[70%] max-w-[260px]'>
-            <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
-              <Link href='/projects/873687236'>
-                <img
-                  className='rounded-lg hover:opacity-90'
-                  src='/images/service-example.jpg'
-                  alt='Service Example'
-                />
-              </Link>
-            </div>
-          </div>
-
-          <div className='w-[70%] max-w-[260px]'>
-            <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
-              <Link href='/projects/873687236'>
-                <img
-                  className='rounded-lg hover:opacity-90'
-                  src='/images/service-example.jpg'
-                  alt='Service Example'
-                />
-              </Link>
-            </div>
-          </div>
-
-          <div className='w-[70%] max-w-[260px]'>
-            <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
-              <Link href='/projects/873687236'>
-                <img
-                  className='rounded-lg hover:opacity-90'
-                  src='/images/service-example.jpg'
-                  alt='Service Example'
-                />
-              </Link>
-            </div>
-          </div>
+          {featuredProjects.map((project, index) => {
+            return (
+              <div key={index} className='w-[70%] max-w-[260px]'>
+                <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
+                  <Link href='/projects/873687236'>
+                    <img
+                      className='rounded-lg hover:opacity-90'
+                      src='/images/service-example.jpg'
+                      alt='Service Example'
+                    />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className='text-center'>
           <Link

@@ -19,9 +19,9 @@ export default function Testimonial({ children, name, profile, pic, variant }) {
     <>
       <div
         className={`flex justify-center items-center ${
-          variant ? '-translate-y-[6rem]' : ''
-        } md:hover:scale-105`}>
-        <div className='relative w-10/12 max-w-[900px] h-[480px] md:h-[250px]'>
+          variant ? '-translate-y-[8rem]' : ''
+        }`}>
+        <div className='relative w-10/12 max-w-[900px] h-[480px] md:h-[250px] md:hover:scale-105'>
           {reviews.map((review, index) => {
             return (
               <div

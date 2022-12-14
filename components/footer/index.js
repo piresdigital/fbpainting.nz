@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { navigationItems } from '../../data/data';
+
 // icons
 import {
   BsPinMapFill,
@@ -71,29 +73,16 @@ export default function Footer() {
           </div>
         </div>
         <div className='hidden pt-12 md:flex flex-row justify-center'>
-          <Link className='px-8 opacity-70 transition-opacity hover:opacity-100' href='/'>
-            Home
-          </Link>
-          <Link
-            className='px-8 opacity-70 transition-opacity hover:opacity-100'
-            href='/about'>
-            About
-          </Link>
-          <Link
-            className='px-8 opacity-70 transition-opacity hover:opacity-100'
-            href='/services'>
-            Services
-          </Link>
-          <Link
-            className='px-8 opacity-70 transition-opacity hover:opacity-100'
-            href='/projects'>
-            Projects
-          </Link>
-          <Link
-            className='px-8 opacity-70 transition-opacity hover:opacity-100'
-            href='/contact'>
-            Contact
-          </Link>
+          {navigationItems.map((item, index) => {
+            return (
+              <Link
+                key={'footerNav_' + index}
+                className='px-8 opacity-70 transition-opacity hover:opacity-100'
+                href={item.slug}>
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
         <div className='text-center text-sm pt-12'>
           &copy; FB Painting. ALl rights reserved. Design by{' '}

@@ -24,16 +24,9 @@ export default function Services() {
 
       <ServicesBanner />
 
-      <section>
+      <section className='mb-44'>
         <SectionTitle title='Our Reviews' subtitle='What They Say' />
-        <Testimonial
-          name='Dhavidy Pires'
-          profile='/images/profile-pic.jpg'
-          pic='/images/testimonial/testimonial-1.jpg'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor
-          incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisseultrices
-          gravida.'
-        </Testimonial>
+        <Testimonial />
       </section>
 
       <section>
