@@ -3,14 +3,7 @@ import Link from 'next/link';
 import { navigationItems } from '../../data/data';
 
 // icons
-import {
-  BsPinMapFill,
-  BsEnvelopeFill,
-  BsFillChatDotsFill,
-  BsFacebook,
-  BsInstagram,
-  BsWhatsapp
-} from 'react-icons/bs';
+import { BsPinMapFill, BsEnvelopeFill, BsFillChatDotsFill, BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
 export default function Footer() {
   return (
@@ -21,20 +14,15 @@ export default function Footer() {
           <div className='flex-1 text-center'>
             <BsPinMapFill className='inline-block text-3xl text-white mb-6' />
             <span className='block text-2xl'>Address</span>
-            <span className='block text-lg'>
-              23 Poolburn Court <br />
-              Lake Hayes, Queenstown
-            </span>
+            <span className='block text-lg'>Queenstown</span>
           </div>
 
           <div className='flex-1 text-center '>
             <BsEnvelopeFill className='inline-block text-3xl text-white mb-6' />
             <span className='block text-2xl'>Email</span>
             <span className='block text-lg'>
-              <a
-                href='mailto:contact@fbpainting.nz'
-                className='text-white hover:opacity-70'>
-                contact@fbpainting.nz
+              <a href='mailto:fabricio@fbpainting.nz' className='text-white hover:opacity-70'>
+                fabricio@fbpainting.nz
               </a>
             </span>
           </div>
@@ -46,7 +34,7 @@ export default function Footer() {
               <ul className='flex flex-row gap-12 items-center justify-center mt-6'>
                 <li className='w-2/12'>
                   <a
-                    href=''
+                    href='https://www.facebook.com/fbpaintingnz/'
                     target='_blank'
                     className='block text-2xl transition-all origin-left hover:scale-125'>
                     <BsFacebook />
@@ -54,7 +42,7 @@ export default function Footer() {
                 </li>
                 <li className='w-2/12'>
                   <a
-                    href=''
+                    href='https://instagram.com/fbpaintingnz'
                     target='_blank'
                     className='block text-2xl transition-all origin-left hover:scale-125'>
                     <BsInstagram />
@@ -62,7 +50,7 @@ export default function Footer() {
                 </li>
                 <li className='w-2/12'>
                   <a
-                    href=''
+                    href='https://wa.me/642108872880'
                     target='_blank'
                     className='block text-2xl transition-all origin-left hover:scale-125'>
                     <BsWhatsapp />
@@ -75,10 +63,7 @@ export default function Footer() {
         <div className='hidden pt-12 md:flex flex-row justify-center'>
           {navigationItems.map((item, index) => {
             return (
-              <Link
-                key={'footerNav_' + index}
-                className='px-8 opacity-70 transition-opacity hover:opacity-100'
-                href={item.slug}>
+              <Link key={'footerNav_' + index} className='px-8 opacity-70 transition-opacity hover:opacity-100' href={item.slug}>
                 {item.name}
               </Link>
             );
@@ -86,7 +71,7 @@ export default function Footer() {
         </div>
         <div className='text-center text-sm pt-12'>
           &copy; FB Painting. ALl rights reserved. Design by{' '}
-          <a className='opacity-60' target='_blank' href='https://piresdigital.com'>
+          <a className='opacity-60' target='_blank' href='https://piresdigital.com' rel='nofollow'>
             Pires Digital
           </a>
         </div>

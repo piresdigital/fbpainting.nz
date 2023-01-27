@@ -12,7 +12,7 @@ import Watermark from '../../components/watermark';
 import { projects } from '../../data/data';
 
 export default function Projects() {
-  const categories = ['all', 'interior', 'exterior', 'commercial'];
+  const categories = ['all', 'residential', 'commercial'];
 
   const [list, setList] = useState(projects);
   const [category, setCategories] = useState(categories);
@@ -31,10 +31,10 @@ export default function Projects() {
         <ul className='relative z-10 flex flex-row justify-center gap-8 mb-12 md:mb-20'>
           {category.map((item, i) => {
             return (
-              <li key={i}>
+              <li key={'category_' + i}>
                 <button
-                  className={`capitalize text-brand-green cursor-pointer opacity-80 hover:opacity-100 ${
-                    item === activeCategory ? 'font-bold' : ''
+                  className={`capitalize cursor-pointer opacity-80 py-3 px-4 rounded-md border-2 border-brand-blue hover:opacity-100 ${
+                    item === activeCategory ? 'font-bold text-white bg-brand-blue' : ''
                   } `}
                   onClick={() => setActiveCategory(item)}>
                   {item}
@@ -47,14 +47,10 @@ export default function Projects() {
           {list.map((item, i) => {
             if (activeCategory === item.category || activeCategory === 'all') {
               return (
-                <div key={i} className='w-[70%] max-w-[200px] transition-all'>
+                <div key={'thubnail_' + i} className='w-[70%] max-w-[300px] transition-all'>
                   <div className='rounded-xl overflow-hidden bg-gradient-to-br from-brand-red-500 via-brand-yellow to-brand-blue p-0 mb-4 transition-all hover:scale-105 hover:shadow-2xl hover:p-1'>
-                    <Link href={`/projects/${item.slug}`}>
-                      <img
-                        className='rounded-lg hover:opacity-90'
-                        src={item.thumbnail}
-                        alt={item.clientName}
-                      />
+                    <Link href={`/projects/${i}`}>
+                      <img className='rounded-lg hover:opacity-90' src={item.thumbnail} alt={item.clientName} />
                     </Link>
                   </div>
                 </div>
