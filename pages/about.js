@@ -21,22 +21,23 @@ export default function AboutUs() {
           <h2 className='text-4xl mb-10'>Personal Statement</h2>
           <div className='text-xl'>
             <p className='leading-relaxed mb-8'>
-              FB Painting is a locally family owned business that started in 2017 with the intention and concept of helping our
-              clients achieve their expectations and expressing themselves in a colourful manner.
+              FB Painting is a local family owned business that started in 2017 with the intention and concept of helping our
+              clients achieve their expectations and express themselves in a colourful manner.
             </p>
           </div>
           <div className='text-lg'>
+            <h4 className='text-xl'>Personal Statement</h4>
             <p className='mb-5'>
               I'm Fabrício Barboza (FAB). I've been in NZ since 2005 working in many different industries, building the kiwi
               dream.
             </p>
             <p className='mb-5'>
-              Back on 2015 I decided to become a tradesman. Painting has been a thing that ran in the family, as my father worked
-              for years in Sherwin Williams factory, I grew up seeing him displaying a very strong painting abilities through many
-              of his spraying samples, which I still remember to this day.
+              Back in 2015 I decided to become a tradesman. Painting has been something that runs in the family, as my father
+              worked for years in Sherwin Williams factory, I grew up seeing him display very strong painting abilities through
+              many of his spraying samples, which I still remember to this day.
             </p>
             <p className='mb-5'>
-              Years ago, thought a great friend David Driscall I had the privilege of meeting Brent Pickworth (Owner of Precision
+              Years ago, through a great friend David Driscall I had the privilege of meeting Brent Pickworth (Owner of Precision
               Painter in Motueka ) and He made me realise how renovating a home with a well put together paint work, could change
               the whole idea of it all, giving a home the fresh look it's owners will identify with.
             </p>
@@ -53,8 +54,8 @@ export default function AboutUs() {
 
       <section className='w-[80%] max-w-4xl mx-auto mb-32'>
         <h4 className='text-xl mb-16'>
-          Recognising the suporte of special individuals that help me with a hard start. <br />
-          Thanking God for the love of you all.
+          Recognising the support of special individuals that helped me from the start. <br />
+          Thanking God for the love shown by you all.
         </h4>
         <div className='flex flex-col md:flex-row gap-24 justify-between items-start md:items-center'>
           <ul>

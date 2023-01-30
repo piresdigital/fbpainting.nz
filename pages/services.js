@@ -22,8 +22,8 @@ export default function Services() {
           <div>
             <SectionTitle position='left' title='our services' subtitle='what we do' />
             <p className='text-xl text-slate-500 max-w-sm'>
-              We paint New Builds, Commercial Properties, Renovations and more. We're specialized in traditional Brush, Roller and
-              Spray painting.
+              We paint New Residential, Commercial Properties, Renovations and more. We're specialized in traditional Brush,
+              Roller and Spray painting.
             </p>
             <ul className='list-disc pl-6 mt-4 text-base'>
               <li>New residential</li>

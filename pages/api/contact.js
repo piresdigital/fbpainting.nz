@@ -8,14 +8,14 @@ export default function (req, res) {
   let date = new Date();
 
   const nodemailer = require('nodemailer');
-  const PASSWORD = process.env.PASSWORD;
+  const SENDGRID_KEY = process.env.SENDGRID_KEY;
 
   let transporter = nodemailer.createTransport({
     port: 465,
-    host: 'smtp.gmail.com',
+    host: 'smtp.sendgrid.net',
     auth: {
-      user: 'fabricio@fbpainting.nz',
-      pass: PASSWORD
+      user: 'apikey',
+      pass: SENDGRID_KEY
     },
     secure: true
   });
@@ -40,7 +40,7 @@ export default function (req, res) {
 
   const businessMailData = {
     from: 'fabricio@fbpainting.nz',
-    to: 'fabricio@fbpainting.nz',
+    to: 'dhavidyluizpires@gmail.com',
     subject: 'New Website Enquiry',
     text: businessText,
     html: businessHTML
@@ -52,8 +52,6 @@ export default function (req, res) {
       res.status(500).send();
     }
 
-    if (info) {
-      res.status(200).send();
-    }
+    res.status(200).send();
   });
 }
