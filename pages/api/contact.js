@@ -40,7 +40,7 @@ export default function (req, res) {
 
   const businessMailData = {
     from: 'fabricio@fbpainting.nz',
-    to: 'dhavidyluizpires@gmail.com',
+    to: 'fabricio@fbpainting.nz',
     subject: 'New Website Enquiry',
     text: businessText,
     html: businessHTML
