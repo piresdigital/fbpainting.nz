@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from '../components/header';
 import Breadcrumb from '../components/breadcrumb';
 import ContactForm from '../components/contactform';

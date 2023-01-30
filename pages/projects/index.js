@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import Header from '../../components/header';
+import Head from 'next/head';
 import Breadcrumb from '../../components/breadcrumb';
 import SectionTitle from '../../components/typography/section-title';
 import ContactForm from '../../components/contactform';

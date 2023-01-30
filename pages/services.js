@@ -2,6 +2,7 @@ import Header from '../components/header';
 import Breadcrumb from '../components/breadcrumb';
 import ServicesBanner from '../components/services';
 import SectionTitle from '../components/typography/section-title';
+import Head from 'next/head';
 import Testimonial from '../components/testimonial';
 import Partners from '../components/partners';
 import ContactForm from '../components/contactform';
