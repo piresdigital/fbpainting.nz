@@ -9,6 +9,9 @@ import Watermark from '../components/watermark';
 export default function AboutUs() {
   return (
     <>
+      <Head>
+        <title>About Us | FB Painting.</title>
+      </Head>
       <ToTop />
       <Header />
       <Breadcrumb title='About Us' />

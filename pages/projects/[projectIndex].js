@@ -25,7 +25,6 @@ const ProjectPage = () => {
     <>
       <Head>
         <title>Our Work | FB Painting</title>
-        <meta name='description' content='' />
       </Head>
 
       {image && (

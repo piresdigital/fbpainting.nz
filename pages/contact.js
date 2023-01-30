@@ -8,6 +8,9 @@ import Watermark from '../components/watermark';
 export default function Contact() {
   return (
     <>
+      <Head>
+        <title>Contact Us | FB Painting.</title>
+      </Head>
       <ToTop />
       <Header />
       <Breadcrumb title='Contact Us' />

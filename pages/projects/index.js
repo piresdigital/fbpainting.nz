@@ -20,6 +20,9 @@ export default function Projects() {
 
   return (
     <>
+      <Head>
+        <title>Projects | FB Painting.</title>
+      </Head>
       <ToTop />
       <Header />
       <Breadcrumb title='Projects' />

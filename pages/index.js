@@ -17,8 +17,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>FB Painting | Professional indoor, outdoor and commercial painting company.</title>
-        <meta name='description' content='' />
+        <title>FB Painting | We paint New Residential, Commercial Properties, Renovations and more.</title>
+        <meta
+          name='description'
+          content={`We paint New Residential, Commercial Properties, Renovations and more. We're specialized in traditional Brush, Roller and Spray painting.`}
+        />
       </Head>
 
       <ToTop />
@@ -32,8 +35,8 @@ export default function Home() {
           <div>
             <SectionTitle position='left' title='our services' subtitle='what we do' />
             <p className='text-xl text-slate-500 max-w-sm'>
-              We paint New Builds, Commercial Properties, Renovations and more. We're specialized in traditional Brush, Roller and
-              Spray painting.
+              We paint New Residential, Commercial Properties, Renovations and more. We're specialized in traditional Brush,
+              Roller and Spray painting.
             </p>
             <ul className='list-disc pl-6 mt-4 text-base'>
               <li>New residential</li>

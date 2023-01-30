@@ -12,6 +12,9 @@ import Watermark from '../components/watermark';
 export default function Services() {
   return (
     <>
+      <Head>
+        <title>Services | FB Painting.</title>
+      </Head>
       <ToTop />
       <Header />
       <Breadcrumb title='Services' />
