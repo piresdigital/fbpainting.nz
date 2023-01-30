@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>FB Painting | We paint New Residential, Commercial Properties, Renovations and more.</title>
+        <title>FB Painting | We paint New Residential, Commercial Properties, Renovations and more..</title>
         <meta
           name='description'
           content={`We paint New Residential, Commercial Properties, Renovations and more. We're specialized in traditional Brush, Roller and Spray painting.`}
